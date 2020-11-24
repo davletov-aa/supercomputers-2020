@@ -1,0 +1,87 @@
+Sender: LSF System <lsfadmin@polus-c4-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 664397: <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel20-624-01 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 20;#BSUB -W 00:15;#BSUB -o prog_L_1_npr_20_npt_512_nsteps_20_LT_0.001.txt;#BSUB -e prog.%J.err;OMP_NUM_THREADS=1 mpiexec prog 512 20 1 1 1 0.001 just_prefix> in cluster <MSUCluster> Done
+
+Job <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel20-624-01 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 20;#BSUB -W 00:15;#BSUB -o prog_L_1_npr_20_npt_512_nsteps_20_LT_0.001.txt;#BSUB -e prog.%J.err;OMP_NUM_THREADS=1 mpiexec prog 512 20 1 1 1 0.001 just_prefix> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skmodel20-624-01> in cluster <MSUCluster> at Mon Nov 23 00:42:05 2020
+Job was executed on host(s) <20*polus-c4-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skmodel20-624-01> in cluster <MSUCluster> at Mon Nov 23 00:42:06 2020
+</home_edu/edu-cmc-skmodel20-624/edu-cmc-skmodel20-624-01> was used as the home directory.
+</home_edu/edu-cmc-skmodel20-624/edu-cmc-skmodel20-624-01/quickstart> was used as the working directory.
+Started at Mon Nov 23 00:42:06 2020
+Terminated at Mon Nov 23 00:49:05 2020
+Results reported at Mon Nov 23 00:49:05 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel20-624-01 #
+source /polusfs/setenv/setup.SMPI
+#BSUB -n 20
+#BSUB -W 00:15
+#BSUB -o prog_L_1_npr_20_npt_512_nsteps_20_LT_0.001.txt
+#BSUB -e prog.%J.err
+OMP_NUM_THREADS=1 mpiexec prog 512 20 1 1 1 0.001 just_prefix
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   842.74 sec.
+    Max Memory :                                 26668 MB
+    Average Memory :                             26229.50 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   18 MB
+    Max Processes :                              24
+    Max Threads :                                69
+    Run time :                                   418 sec.
+    Turnaround time :                            420 sec.
+
+The output (if any) follows:
+
+worldRank: 0
+number of points in grid changed from 512 to 520
+locXNumPoints: 260
+locYNumPoints: 260
+locZNumPoints: 104
+xNumProcs: 2
+yNumProcs: 2
+zNumProcs: 5
+Lx: 1, Ly: 1, Lz: 1, Lt: 0.001
+numProcs: 20, numPoints: 512, numTSteps: 20
+deltaX: 0.00191939, deltaY: 0.00191939, deltaZ: 0.00191939, deltaT: 5.26316e-05
+deltaX^2: 3.68404e-06, deltaY^2: 3.68404e-06, deltaZ^2: 3.68404e-06, deltaT^2: 2.77008e-09
+memory allocation for buffers ...
+local block size: 7276264
+allocating buffer for analytic solutuion for 20 steps
+buffers initialization ...
+max error at timestep 0 is 0
+max error at timestep 1 is 1.24012e-13
+calculation ...
+max error at timestep 2 is 4.96048e-13
+max error at timestep 3 is 1.116e-12
+max error at timestep 4 is 1.98397e-12
+max error at timestep 5 is 3.09985e-12
+max error at timestep 6 is 4.46354e-12
+max error at timestep 7 is 6.07536e-12
+max error at timestep 8 is 7.9351e-12
+max error at timestep 9 is 1.00429e-11
+max error at timestep 10 is 1.23984e-11
+max error at timestep 11 is 1.50019e-11
+max error at timestep 12 is 1.78532e-11
+max error at timestep 13 is 2.09525e-11
+max error at timestep 14 is 2.42998e-11
+max error at timestep 15 is 2.78949e-11
+max error at timestep 16 is 3.17381e-11
+max error at timestep 17 is 3.5829e-11
+max error at timestep 18 is 4.0168e-11
+max error at timestep 19 is 4.47549e-11
+elapsed time: 354.112 seconds
+memory dismission ...
+
+
+PS:
+
+Read file <prog.664397.err> for stderr output of this job.
+

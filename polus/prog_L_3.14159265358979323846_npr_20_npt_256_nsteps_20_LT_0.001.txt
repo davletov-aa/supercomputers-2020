@@ -1,0 +1,88 @@
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 664405: <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel20-624-01 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 20;#BSUB -W 00:15;#BSUB -o prog_L_3.14159265358979323846_npr_20_npt_256_nsteps_20_LT_0.001.txt;#BSUB -e prog.%J.err;OMP_NUM_THREADS=1 mpiexec prog 256 20 3.14159265358979323846 3.14159265358979323846 3.14159265358979323846 0.001 just_prefix> in cluster <MSUCluster> Done
+
+Job <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel20-624-01 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 20;#BSUB -W 00:15;#BSUB -o prog_L_3.14159265358979323846_npr_20_npt_256_nsteps_20_LT_0.001.txt;#BSUB -e prog.%J.err;OMP_NUM_THREADS=1 mpiexec prog 256 20 3.14159265358979323846 3.14159265358979323846 3.14159265358979323846 0.001 just_prefix> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skmodel20-624-01> in cluster <MSUCluster> at Mon Nov 23 00:42:05 2020
+Job was executed on host(s) <10*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skmodel20-624-01> in cluster <MSUCluster> at Mon Nov 23 00:45:51 2020
+                            <10*polus-c1-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-skmodel20-624/edu-cmc-skmodel20-624-01> was used as the home directory.
+</home_edu/edu-cmc-skmodel20-624/edu-cmc-skmodel20-624-01/quickstart> was used as the working directory.
+Started at Mon Nov 23 00:45:51 2020
+Terminated at Mon Nov 23 00:47:10 2020
+Results reported at Mon Nov 23 00:47:10 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel20-624-01 #
+source /polusfs/setenv/setup.SMPI
+#BSUB -n 20
+#BSUB -W 00:15
+#BSUB -o prog_L_3.14159265358979323846_npr_20_npt_256_nsteps_20_LT_0.001.txt
+#BSUB -e prog.%J.err
+OMP_NUM_THREADS=1 mpiexec prog 256 20 3.14159265358979323846 3.14159265358979323846 3.14159265358979323846 0.001 just_prefix
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   156.74 sec.
+    Max Memory :                                 4407 MB
+    Average Memory :                             2713.38 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              25
+    Max Threads :                                73
+    Run time :                                   78 sec.
+    Turnaround time :                            305 sec.
+
+The output (if any) follows:
+
+worldRank: 0
+number of points in grid changed from 256 to 260
+locXNumPoints: 130
+locYNumPoints: 130
+locZNumPoints: 52
+xNumProcs: 2
+yNumProcs: 2
+zNumProcs: 5
+Lx: 3.14159, Ly: 3.14159, Lz: 3.14159, Lt: 0.001
+numProcs: 20, numPoints: 256, numTSteps: 20
+deltaX: 0.0120368, deltaY: 0.0120368, deltaZ: 0.0120368, deltaT: 5.26316e-05
+deltaX^2: 0.000144883, deltaY^2: 0.000144883, deltaZ^2: 0.000144883, deltaT^2: 2.77008e-09
+memory allocation for buffers ...
+local block size: 940896
+allocating buffer for analytic solutuion for 20 steps
+buffers initialization ...
+max error at timestep 0 is 0
+max error at timestep 1 is 5.02931e-14
+calculation ...
+max error at timestep 2 is 2.00839e-13
+max error at timestep 3 is 4.5175e-13
+max error at timestep 4 is 8.02913e-13
+max error at timestep 5 is 1.25455e-12
+max error at timestep 6 is 1.80633e-12
+max error at timestep 7 is 2.45837e-12
+max error at timestep 8 is 3.21088e-12
+max error at timestep 9 is 4.06342e-12
+max error at timestep 10 is 5.01632e-12
+max error at timestep 11 is 6.06948e-12
+max error at timestep 12 is 7.223e-12
+max error at timestep 13 is 8.47677e-12
+max error at timestep 14 is 9.83091e-12
+max error at timestep 15 is 1.12855e-11
+max error at timestep 16 is 1.28404e-11
+max error at timestep 17 is 1.44956e-11
+max error at timestep 18 is 1.6251e-11
+max error at timestep 19 is 1.81067e-11
+elapsed time: 62.5569 seconds
+memory dismission ...
+
+
+PS:
+
+Read file <prog.664405.err> for stderr output of this job.
+

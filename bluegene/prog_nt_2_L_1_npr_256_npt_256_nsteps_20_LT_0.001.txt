@@ -1,0 +1,38 @@
+worldRank: 0
+locXNumPoints: 64
+locYNumPoints: 32
+locZNumPoints: 32
+xNumProcs: 4
+yNumProcs: 8
+zNumProcs: 8
+Lx: 1, Ly: 1, Lz: 1, Lt: 0.001
+numProcs: 256, numPoints: 256, numTSteps: 20
+deltaX: 0.00389105, deltaY: 0.00389105, deltaZ: 0.00389105, deltaT: 5.26316e-05
+deltaX^2: 1.51403e-05, deltaY^2: 1.51403e-05, deltaZ^2: 1.51403e-05, deltaT^2: 2.77008e-09
+memory allocation for buffers ...
+local block size: 76296
+allocating buffer for analytic solutuion for 20 steps
+buffers initialization ...
+max error at timestep 0 is 0
+max error at timestep 1 is 5.1037e-13
+calculation ...
+max error at timestep 2 is 2.04148e-12
+max error at timestep 3 is 4.5931e-12
+max error at timestep 4 is 8.16547e-12
+max error at timestep 5 is 1.27585e-11
+max error at timestep 6 is 1.83721e-11
+max error at timestep 7 is 2.50066e-11
+max error at timestep 8 is 3.26617e-11
+max error at timestep 9 is 4.13375e-11
+max error at timestep 10 is 5.1034e-11
+max error at timestep 11 is 6.17513e-11
+max error at timestep 12 is 7.34893e-11
+max error at timestep 13 is 8.6248e-11
+max error at timestep 14 is 1.00028e-10
+max error at timestep 15 is 1.14828e-10
+max error at timestep 16 is 1.30649e-10
+max error at timestep 17 is 1.4749e-10
+max error at timestep 18 is 1.65353e-10
+max error at timestep 19 is 1.84235e-10
+elapsed time: 1.42413 seconds
+memory dismission ...

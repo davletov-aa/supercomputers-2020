@@ -1,0 +1,89 @@
+Sender: LSF System <lsfadmin@polus-c3-ib.bmc.hpc.cs.msu.ru>
+Subject: Job 664399: <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel20-624-01 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 40;#BSUB -W 00:15;#BSUB -o prog_L_1_npr_40_npt_256_nsteps_20_LT_0.001.txt;#BSUB -e prog.%J.err;OMP_NUM_THREADS=1 mpiexec prog 256 20 1 1 1 0.001 just_prefix> in cluster <MSUCluster> Done
+
+Job <# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel20-624-01 #;source /polusfs/setenv/setup.SMPI;#BSUB -n 40;#BSUB -W 00:15;#BSUB -o prog_L_1_npr_40_npt_256_nsteps_20_LT_0.001.txt;#BSUB -e prog.%J.err;OMP_NUM_THREADS=1 mpiexec prog 256 20 1 1 1 0.001 just_prefix> was submitted from host <polus-ib.bmc.hpc.cs.msu.ru> by user <edu-cmc-skmodel20-624-01> in cluster <MSUCluster> at Mon Nov 23 00:42:05 2020
+Job was executed on host(s) <20*polus-c3-ib.bmc.hpc.cs.msu.ru>, in queue <short>, as user <edu-cmc-skmodel20-624-01> in cluster <MSUCluster> at Mon Nov 23 00:54:53 2020
+                            <10*polus-c1-ib.bmc.hpc.cs.msu.ru>
+                            <10*polus-c4-ib.bmc.hpc.cs.msu.ru>
+</home_edu/edu-cmc-skmodel20-624/edu-cmc-skmodel20-624-01> was used as the home directory.
+</home_edu/edu-cmc-skmodel20-624/edu-cmc-skmodel20-624-01/quickstart> was used as the working directory.
+Started at Mon Nov 23 00:54:53 2020
+Terminated at Mon Nov 23 00:56:21 2020
+Results reported at Mon Nov 23 00:56:21 2020
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+# this file was automaticly created by mpisubmit.pl script for edu-cmc-skmodel20-624-01 #
+source /polusfs/setenv/setup.SMPI
+#BSUB -n 40
+#BSUB -W 00:15
+#BSUB -o prog_L_1_npr_40_npt_256_nsteps_20_LT_0.001.txt
+#BSUB -e prog.%J.err
+OMP_NUM_THREADS=1 mpiexec prog 256 20 1 1 1 0.001 just_prefix
+
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   429.32 sec.
+    Max Memory :                                 5565 MB
+    Average Memory :                             3575.79 MB
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              46
+    Max Threads :                                137
+    Run time :                                   88 sec.
+    Turnaround time :                            856 sec.
+
+The output (if any) follows:
+
+worldRank: 0
+number of points in grid changed from 256 to 260
+locXNumPoints: 130
+locYNumPoints: 65
+locZNumPoints: 52
+xNumProcs: 2
+yNumProcs: 4
+zNumProcs: 5
+Lx: 1, Ly: 1, Lz: 1, Lt: 0.001
+numProcs: 40, numPoints: 256, numTSteps: 20
+deltaX: 0.00383142, deltaY: 0.00383142, deltaZ: 0.00383142, deltaT: 5.26316e-05
+deltaX^2: 1.46798e-05, deltaY^2: 1.46798e-05, deltaZ^2: 1.46798e-05, deltaT^2: 2.77008e-09
+memory allocation for buffers ...
+local block size: 477576
+allocating buffer for analytic solutuion for 20 steps
+buffers initialization ...
+max error at timestep 0 is 0
+max error at timestep 1 is 4.94826e-13
+calculation ...
+max error at timestep 2 is 1.97931e-12
+max error at timestep 3 is 4.45344e-12
+max error at timestep 4 is 7.91722e-12
+max error at timestep 5 is 1.23708e-11
+max error at timestep 6 is 1.78139e-11
+max error at timestep 7 is 2.42467e-11
+max error at timestep 8 is 3.16692e-11
+max error at timestep 9 is 4.00815e-11
+max error at timestep 10 is 4.94833e-11
+max error at timestep 11 is 5.98747e-11
+max error at timestep 12 is 7.12556e-11
+max error at timestep 13 is 8.36262e-11
+max error at timestep 14 is 9.69865e-11
+max error at timestep 15 is 1.11336e-10
+max error at timestep 16 is 1.26676e-10
+max error at timestep 17 is 1.43005e-10
+max error at timestep 18 is 1.60324e-10
+max error at timestep 19 is 1.78632e-10
+elapsed time: 67.1933 seconds
+memory dismission ...
+
+
+PS:
+
+Read file <prog.664399.err> for stderr output of this job.
+
