@@ -485,37 +485,14 @@ public:
         double localMaxError = 0.0;
         double *uAtT = atTStep == 0 ? prevPrevU : (atTStep == 1 ? prevU : u);
         double error = 0.0;
-
-        #pragma omp parallel for
-        for (int x = 0; x < xx; ++x) {
-            #pragma omp parallel for
-            for (int y = 0; y < yy; ++y) {
-                #pragma omp parallel for
-                for (int z = 0; z < zz; ++z) {
-                    if (
-                        ((x == 0) && (y == 0)) ||
-                        ((x == 0) && (z == 0)) ||
-                        ((y == 0) && (z == 0)) ||
-                        ((x == 0) && (y == yy - 1)) ||
-                        ((x == 0) && (z == zz - 1)) ||
-                        ((y == 0) && (x == xx - 1)) ||
-                        ((y == 0) && (z == zz - 1)) ||
-                        ((z == 0) && (x == xx - 1)) ||
-                        ((z == 0) && (y == yy - 1)) ||
-                        ((x == xx - 1) && (y == yy - 1)) ||
-                        ((x == xx - 1) && (z == zz - 1)) ||
-                        ((y == yy - 1) && (z == zz - 1))
-                    ) {
-                        continue;
-                    }
-                    #pragma omp critical
-                    {
-                        error = abs(
-                            *(uAtT + getOffset3D(x, y, z, yy, zz)) -
-                            *(u_gold + getOffset4D(atTStep, x, y, z, xx, yy, zz))
-                        );
-                        localMaxError = max(localMaxError, error);
-                    }
+        for (int x = 1; x < xx - 1; ++x) {
+            for (int y = 1; y < yy - 1; ++y) {
+                for (int z = 1; z < zz - 1; ++z) {
+                    error = abs(
+                        *(uAtT + getOffset3D(x, y, z, yy, zz)) -
+                        *(u_gold + getOffset4D(atTStep, x, y, z, xx, yy, zz))
+                    );
+                    localMaxError = max(localMaxError, error);
                 }
             }
         }
@@ -528,7 +505,6 @@ public:
             }
             cout << "max error at timestep " << atTStep << " is " << localMaxError << endl;
         }
-        MPI_Bcast(&maxError, 1, MPI_INT, 0, MPI_COMM_WORLD);
     }
 
     void aggregate_results() {
@@ -726,8 +702,10 @@ public:
 
     void performStep() {
         curTStep++;
-        memcpy(prevPrevU, prevU, blockSize * sizeof(double));
-        memcpy(prevU, u, blockSize * sizeof(double));
+        double *tmp = prevPrevU;
+        prevPrevU = prevU;
+        prevU = u;
+        u = tmp;
     }
 };
 
