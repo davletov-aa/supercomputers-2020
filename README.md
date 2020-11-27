@@ -11,8 +11,11 @@
 
 ![Figure 3](pics/atZ0.463.png)
 
+#### Blugene: Lx = Ly = Lz = 1
 ![Figure 4](pics/l1bluegene.png)
 
+#### Blugene: Lx = Ly = Lz = π
 ![Figure 5](pics/lpibluegene.png)
 
+#### Polus: Lx = Ly = Lz = 1 - on the left, Lx = Ly = Lz = π - on the right
 ![Figure 6](pics/l1lpipolus.png)
